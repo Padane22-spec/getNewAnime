@@ -1,3 +1,13 @@
+'''
+Author: padane22 461834180@qq.com
+Date: 2022-11-17 21:49:26
+LastEditors: padane22 461834180@qq.com
+LastEditTime: 2022-11-17 21:50:42
+FilePath: \getNewAnime\anime.py
+Description: 
+
+Copyright (c) 2022 by padane22 461834180@qq.com, All Rights Reserved. 
+'''
 import requests
 from bs4 import BeautifulSoup
 
@@ -12,8 +22,9 @@ def main():
         'Cookie': '_ga=GA1.2.760634598.1610870362; __cfduid=d96d70942d1f45247029bf1f14aea03971614588585; _gid=GA1.2.494659697.1614588586'
     }
 
+    # 服务器返回响应
     r = requests.get(webSite, headers=headers)
-    demo = r.text  # 服务器返回响应
+    demo = r.text
 
     soup = BeautifulSoup(demo, "html.parser",)
 
